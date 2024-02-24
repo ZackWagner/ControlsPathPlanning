@@ -1,0 +1,6 @@
+For this problem, I used a graph representing the whole feild with each node being an x,y coordinate and being connected to every adjacent node.
+I used the path scoring methods provided to give each edge a weight representing the risk. I also gave each edge a weight of either 1 or 1.41 depending 
+on if it was a vertical/horizontal or diagonal edge. Finally, I created a dijkstras algorithm implementation and ran it twice, once focusing on
+minimizing risk using length as a tiebreaker, and once focusing on minimizing length using risk as a tiebreaker. This way, any node that was visited
+by the first dijkstras run had the shortest risk minimizing path, and any node that wasnt visited was too far away to focus on risk, so I had to focus on
+length instead using the second dijkstras run.
